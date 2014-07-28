@@ -1,5 +1,6 @@
+XTerm*faceName: Inconsolata:size=12
 XTerm*locale: true
 XTerm*metaSendsEscape: true
-XTerm*saveLines: 4096
 XTerm*reverseVideo: on
-XTerm*faceName: Inconsolata:size=12
+XTerm*saveLines: 4096
+XTerm*scrollBar: false
