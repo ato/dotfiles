@@ -1,0 +1,8 @@
+#!/bin/sh
+
+ln -svfT ../dotfiles/git ~/.config/git
+ln -svfT ../dotfiles/herbstluftwm ~/.config/herbstluftwm
+
+ln -svfT dotfiles/bashrc ~/.bashrc
+ln -svfT dotfiles/screenrc ~/.screenrc
+ln -svfT dotfiles/Xresources ~/.Xresources

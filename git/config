@@ -1,0 +1,7 @@
+[push]
+        default = simple
+[merge]
+        defaultToUpstream = true
+[alias]
+	aa = add --all
+	amend = commit --amend

@@ -1,0 +1,11 @@
+vbell on
+startup_message off
+defscrollback 10000
+hardstatus alwayslastline "%{= k} %=%{= w}%-w[%n %t]%+w"
+escape ``
+
+# make xterm scroll back work, by using normal buffer, not alternate
+termcapinfo xterm*|rxvt* ti=\E7\E[?47l
+
+defutf8 on
+shelltitle "$ |bash"
