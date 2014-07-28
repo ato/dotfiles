@@ -6,6 +6,7 @@
 [[ $- != *i* ]] && return
 
 alias grep='grep --color=auto'
+alias hc=herbstclient
 alias ls='ls --color=auto'
 alias sl=ls
 alias sudo='sudo ' # force alias expansion
@@ -33,3 +34,6 @@ if [[ -n "$SSH_CONNECTION" ]]; then
     alias reboot='confirm reboot'
     PS1='\e[92m\u\e[39m@\e[93m\h\e[39m \e[94m\W\e[39m \$ '
 fi
+
+source /usr/share/bash-completion/completions/herbstclient 2>/dev/null
+complete -F _herbstclient_complete -o nospace hc
