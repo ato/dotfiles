@@ -8,6 +8,7 @@
 alias grep='grep --color=auto'
 alias hc=herbstclient
 alias ls='ls --color=auto'
+alias man='man ' # force alias expansion
 alias sl=ls
 alias sudo='sudo ' # force alias expansion
 alias vi=vim
