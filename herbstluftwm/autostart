@@ -19,7 +19,11 @@ Mod=Mod4
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
-hc keybind $Mod-Return spawn xterm
+if [ -f /usr/bin/lilyterm ]; then
+    hc keybind $Mod-Return spawn lilyterm
+else
+    hc keybind $Mod-Return spawn xterm
+fi
 hc keybind $Mod-Control-w spawn firefox
 hc keybind $Mod-semicolon spawn ~/.config/herbstluftwm/wselect.sh select
 hc keybind $Mod-Shift-semicolon spawn ~/.config/herbstluftwm/wselect.sh bring

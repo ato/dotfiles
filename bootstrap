@@ -2,6 +2,7 @@
 
 ln -svfT ../dotfiles/git ~/.config/git
 ln -svfT ../dotfiles/herbstluftwm ~/.config/herbstluftwm
+ln -svfT ../dotfiles/lilyterm ~/.config/lilyterm
 
 ln -svfT dotfiles/bashrc ~/.bashrc
 ln -svfT dotfiles/screenrc ~/.screenrc
