@@ -10,8 +10,12 @@ hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 setxkbmap -option ctrl:nocaps
-pkill -u $USER compton
+
+pkill -u $USER '^compton$'
+pkill -u $USER '^trayer$'
 compton &
+trayer --edge top --align right --widthtype pixel --heighttype pixel --transparent true --alpha 0 --tint 0x181512 --height 16 --width 150 --margin 156 &
+
 
 # remove all existing keybindings
 hc keyunbind --all
