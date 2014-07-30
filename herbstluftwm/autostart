@@ -12,10 +12,10 @@ xsetroot -solid '#5A8E3A'
 setxkbmap -option ctrl:nocaps
 
 pkill -u $USER '^compton$'
-pkill -u $USER '^trayer$'
 compton &
-trayer --edge top --align right --widthtype pixel --heighttype pixel --transparent true --alpha 0 --tint 0x181512 --height 16 --width 150 --margin 156 &
 
+pkill -u $USER '^trayer$'
+(sleep 1; trayer --edge top --align right --widthtype pixel --heighttype pixel --transparent true --alpha 0 --tint 0x181512 --height 16 --width 150 --margin 156) &
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -183,3 +183,4 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
 done
+
