@@ -10,6 +10,8 @@ hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 setxkbmap -option ctrl:nocaps
+pkill -u $USER compton
+compton &
 
 # remove all existing keybindings
 hc keyunbind --all
@@ -27,6 +29,7 @@ fi
 hc keybind $Mod-Control-w spawn firefox
 hc keybind $Mod-semicolon spawn ~/.config/herbstluftwm/wselect.sh select
 hc keybind $Mod-Shift-semicolon spawn ~/.config/herbstluftwm/wselect.sh bring
+hc keybind $Mod-apostrophe spawn dmenu_run
 
 # basic movement
 # focusing clients

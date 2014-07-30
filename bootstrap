@@ -1,5 +1,6 @@
 #!/bin/sh
 
+ln -svfT ../dotfiles/compton.conf ~/.config/compton.conf
 ln -svfT ../dotfiles/git ~/.config/git
 ln -svfT ../dotfiles/herbstluftwm ~/.config/herbstluftwm
 ln -svfT ../dotfiles/lilyterm ~/.config/lilyterm
