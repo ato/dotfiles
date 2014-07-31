@@ -15,4 +15,4 @@ case $1 in
         ;;
 esac
 
-
+amixer get Master | grep '%' | dzen2 -p 1
