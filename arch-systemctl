@@ -1,0 +1,8 @@
+#!/bin/bash
+
+SVCS="sshd.socket lightdm"
+
+for s in $SVCS; do
+  systemctl enable $s
+  systemctl start $s
+done
