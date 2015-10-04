@@ -76,6 +76,7 @@ hc pad $monitor $panel_height
     visible=true
     date=""
     windowtitle=""
+    battery=""
     while true ; do
 
         ### Output ###
@@ -117,7 +118,7 @@ hc pad $monitor $panel_height
         echo -n "$separator"
         echo -n "^bg()^fg() ${windowtitle//^/^^}"
         # small adjustments
-        right="$separator^bg() $date $separator"
+        right="$separator^bg() $date$battery $separator"
         right_text_only=$(echo -n "$right" | sed 's.\^[^(]*([^)]*)..g')
         # get width of right aligned text.. and add some space..
         width=$($textwidth "$font" "$right_text_only    ")
@@ -143,6 +144,7 @@ hc pad $monitor $panel_height
             date)
                 #echo "resetting date" >&2
                 date="${cmd[@]:1}"
+                battery="^fg(#909090)$(acpi | cut -d, -f2)"
                 ;;
             quit_panel)
                 exit
