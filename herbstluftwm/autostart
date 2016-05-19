@@ -18,6 +18,7 @@ pkill -u $USER '^trayer$'
 (sleep 1; trayer --edge top --align right --widthtype pixel --heighttype pixel --transparent true --alpha 0 --tint 0x181512 --height 16 --width 150 --margin 156) &
 pkill -u $USER '^gnubiff$'
 (sleep 1.3; gnubiff --systemtray -n ) &
+pgrep redshift > /dev/null || redshift &
 
 # the panel leaves stray processes around, kill them
 pkill -u $USER '^herbstclient$'
@@ -129,18 +130,30 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#222222'
-hc set frame_border_normal_color '#101010'
-hc set frame_bg_normal_color '#565656'
-hc set frame_bg_active_color '#345F0C'
+
+if [[ $(date +%H) -gt 19 ]] || [[ $(date +%H) -lt 7 ]]; then
+    # night
+    hc set frame_border_active_color '#222222'
+    hc set frame_border_normal_color '#101010'
+    hc set frame_bg_normal_color '#565656'
+    hc set frame_bg_active_color '#5F340C'
+    hc attr theme.active.color '#7f0000'
+    hc attr theme.normal.color '#454545'
+else
+    # day
+    hc set frame_border_active_color '#222222'
+    hc set frame_border_normal_color '#101010'
+    hc set frame_bg_normal_color '#565656'
+    hc set frame_bg_active_color '#345F0C'
+    hc attr theme.active.color '#9fbc00'
+    hc attr theme.normal.color '#454545'
+fi
 hc set frame_border_width 1
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 5
 hc set frame_gap 4
 
-hc attr theme.active.color '#9fbc00'
-hc attr theme.normal.color '#454545'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 1
 hc attr theme.inner_color black
