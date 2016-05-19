@@ -8,7 +8,6 @@ hc() {
 
 hc emit_hook reload
 
-xsetroot -solid '#5A8E3A'
 setxkbmap -option ctrl:nocaps
 
 pkill -u $USER '^compton$'
@@ -139,6 +138,7 @@ if [[ $(date +%H) -gt 19 ]] || [[ $(date +%H) -lt 7 ]]; then
     hc set frame_bg_active_color '#5F340C'
     hc attr theme.active.color '#7f0000'
     hc attr theme.normal.color '#454545'
+    xsetroot -solid '#200000'
 else
     # day
     hc set frame_border_active_color '#222222'
@@ -147,6 +147,7 @@ else
     hc set frame_bg_active_color '#345F0C'
     hc attr theme.active.color '#9fbc00'
     hc attr theme.normal.color '#454545'
+    xsetroot -solid '#5A8E3A'
 fi
 hc set frame_border_width 1
 hc set always_show_frame 1
