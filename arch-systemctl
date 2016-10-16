@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SVCS="sshd.socket lightdm"
+SVCS="sshd.socket lxdm pcscd"
 
 for s in $SVCS; do
   systemctl enable $s

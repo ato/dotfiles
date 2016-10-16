@@ -3,17 +3,15 @@ strace
 gdb
 lsof
 sysstat
-lightdm
+lxdm
 vim
 screen
 wget
 base-devel
 fakeroot
-lilyterm
+xfce4-terminal
 remmina
 gnupg
-pass
-pidgin
 x2goclient
 emacs
 wmctrl
@@ -24,8 +22,12 @@ dnsutils
 net-snmp
 git
 subversion
+i3
+dmenu
+
+# smartcard
+pcsc-tools
+opensc
 
 # AUR
-compton-git
-pidgin-sipe
 ttf-inconsolata-g
