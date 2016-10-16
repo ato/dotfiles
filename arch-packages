@@ -19,7 +19,6 @@ emacs
 wmctrl
 alsa-utils
 firefox
-ttf-inconsolata
 jdk8-openjdk
 dnsutils
 net-snmp
@@ -29,3 +28,4 @@ subversion
 # AUR
 compton-git
 pidgin-sipe
+ttf-inconsolata-g
