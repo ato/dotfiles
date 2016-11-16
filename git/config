@@ -5,3 +5,14 @@
 [alias]
 	aa = add --all
 	amend = commit --amend
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+[user]
+	email = ato@meshy.org
+	name = Alex Osborne
+[hub]
+	protocol = ssh
+[core]
+	excludesfile = /home/ato/.gitignore
